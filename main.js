@@ -101,7 +101,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         const validatePhoneNumber = (phone) => {
             const digits = phone.replace(/\D/g, '');
-            return digits.length === 10;
+
+            if (digits.length !== 10) return false;
+
+            if (/(.)\1{5,}/.test(digits)) return false;
+
+            let isConsecutive = true;
+            for (let i = 1; i < digits.length; i++) {
+                const diff = Math.abs(parseInt(digits[i]) - parseInt(digits[i - 1]));
+                if (diff !== 1 && diff !== 9) {
+                    isConsecutive = false;
+                    break;
+                }
+            }
+            if (isConsecutive) return false;
+
+            return true;
         };
 
         const validateBusinessName = (name) => {
