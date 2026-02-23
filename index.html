@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -298,22 +299,23 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Business Name</label>
-                                <input type="text" placeholder="Your Business" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all">
+                                <input type="text" name="business_name" placeholder="Your Business" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all">
                             </div>
                             <div class="space-y-2">
                                 <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Phone Number</label>
-                                <input type="tel" placeholder="+91 00000 00000" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all">
+                                <input type="tel" name="phone_number" placeholder="+91 00000 00000" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Primary Goal</label>
-                            <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all appearance-none bg-white">
+                            <select name="primary_goal" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all appearance-none bg-white">
                                 <option>Build a New Site & Run Ads</option>
                                 <option>Improve Local Visibility</option>
                                 <option>Scale Existing Traffic</option>
                                 <option>Just a Website Build</option>
                             </select>
                         </div>
+                        <div id="form-message" class="hidden p-4 rounded-lg text-sm font-medium"></div>
                         <button type="submit" class="w-full py-4 bg-navy-900 text-white font-bold rounded-lg hover:bg-black transition-all">
                             Secure My Foundation
                         </button>

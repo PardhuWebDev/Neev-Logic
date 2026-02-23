@@ -5,6 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    emailjs.init('YOUR_PUBLIC_KEY');
+
     lucide.createIcons();
     gsap.registerPlugin(ScrollTrigger);
 
@@ -99,23 +101,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
-            
+            const messageDiv = document.getElementById('form-message');
+
             btn.disabled = true;
             btn.innerText = "Securing Foundation...";
-            
-            setTimeout(() => {
-                btn.innerText = "Foundation Secured!";
-                btn.style.backgroundColor = "#22c55e"; 
-                contactForm.reset();
-                
-                setTimeout(() => {
+            messageDiv.classList.add('hidden');
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+                .then(() => {
+                    btn.innerText = "Foundation Secured!";
+                    btn.style.backgroundColor = "#22c55e";
+
+                    messageDiv.textContent = "Thank you! We'll contact you shortly.";
+                    messageDiv.className = "p-4 rounded-lg text-sm font-medium bg-green-50 text-green-700 border border-green-200";
+                    messageDiv.classList.remove('hidden');
+
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.disabled = false;
+                        btn.style.backgroundColor = "";
+                        messageDiv.classList.add('hidden');
+                    }, 5000);
+                })
+                .catch((error) => {
+                    console.error('EmailJS Error:', error);
+
                     btn.innerText = originalText;
                     btn.disabled = false;
-                    btn.style.backgroundColor = "";
-                }, 3000);
-            }, 1500);
+
+                    messageDiv.textContent = "Something went wrong. Please try WhatsApp instead.";
+                    messageDiv.className = "p-4 rounded-lg text-sm font-medium bg-red-50 text-red-700 border border-red-200";
+                    messageDiv.classList.remove('hidden');
+
+                    setTimeout(() => {
+                        messageDiv.classList.add('hidden');
+                    }, 5000);
+                });
         });
     }
 
