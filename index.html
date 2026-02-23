@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neev Logic | Your Business, Now Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-slate-900 font-inter antialiased">
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/#" class="fixed bottom-8 right-8 z-[100] bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 flex items-center justify-center group" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap font-medium">Chat with us</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-navy-900 rounded-sm flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">NL</span>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-900">NEEV LOGIC</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
+                <a href="#problem" class="hover:text-navy-600 transition-colors">Challenge</a>
+                <a href="#growth-engine" class="hover:text-navy-600 transition-colors">Growth Engine</a>
+                <a href="#case-study" class="hover:text-navy-600 transition-colors">Case Study</a>
+                <a href="#contact" class="px-5 py-2 bg-navy-900 text-white rounded-full hover:bg-navy-800 transition-all">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://r2-bucket.flowith.net/f/ba22afbc3d88955b/neev_logic_hero_background_index_0%404096x2286.jpeg" 
+                 alt="Digital Architecture Background" 
+                 class="w-full h-full object-cover opacity-20 scale-105"
+                 id="hero-bg">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl md:text-8xl font-bold text-slate-900 leading-tight mb-6 reveal-text">
+                    Your Business, <br><span class="text-navy-600">Now Digital.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed reveal-subtext">
+                    We build professional websites and run targeted ads to bring customers to your doorstep.
+                </p>
+                <div class="flex flex-wrap gap-4 reveal-btns">
+                    <a href="#contact" class="group px-8 py-4 bg-navy-900 text-white font-semibold rounded-lg flex items-center space-x-2 hover:bg-navy-800 transition-all shadow-xl shadow-navy-900/10">
+                        <span>Get Started</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-sm font-bold tracking-widest text-navy-600 uppercase mb-4">The Challenge</h2>
+                <h3 class="text-4xl font-bold text-slate-900">Why businesses stagnate online</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                <div class="problem-card bg-white p-10 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-red-50 text-red-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="eye-off" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">No Visibility</h4>
+                    <p class="text-slate-600 leading-relaxed">Remaining invisible to the 700M+ internet users in India while competitors dominate search results.</p>
+                </div>
+                <div class="problem-card bg-white p-10 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Low Trust</h4>
+                    <p class="text-slate-600 leading-relaxed">A dated or non-existent website acts as a red flag, losing high-value leads before they even contact you.</p>
+                </div>
+                <div class="problem-card bg-white p-10 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="trending-down" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Losing to Giants</h4>
+                    <p class="text-slate-600 leading-relaxed">Burning capital trying to copy big corporations instead of using lean, logical growth strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Growth Engine (Ads Strategy) -->
+    <section id="growth-engine" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                    <div class="engine-content">
+                        <h2 class="text-sm font-bold tracking-widest text-navy-600 uppercase mb-4">The Growth Engine</h2>
+                        <h3 class="text-5xl font-bold text-slate-900 mb-8 leading-tight">A website without ads is a liability.</h3>
+                        <p class="text-lg text-slate-600 mb-6">
+                            Imagine building a luxury store in a <span class="text-navy-900 font-bold italic">dark back alley</span>. No one walks past it. No one knows it exists.
+                        </p>
+                        <p class="text-lg text-slate-600 mb-8">
+                            Our **Growth Engine** acts as the neon sign on the city’s busiest highway. We engineering a logic-based funnel that directs high-intent traffic from the main road straight to your front door.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-navy-50 rounded-full text-navy-600"><i data-lucide="zap" class="w-6 h-6"></i></div>
+                            <span class="font-bold text-slate-900">Transform your "static brochure" into a "money-making machine."</span>
+                        </div>
+                    </div>
+                    <div class="engine-table bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                        <h4 class="text-xl font-bold mb-6 text-slate-900">The Evolution of Your Asset</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead>
+                                    <tr class="border-b border-slate-200">
+                                        <th class="py-4 text-xs font-bold uppercase text-slate-400">Feature</th>
+                                        <th class="py-4 text-xs font-bold uppercase text-slate-400">Static Website</th>
+                                        <th class="py-4 text-xs font-bold uppercase text-navy-600">Neev Engine</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-sm">
+                                    <tr class="border-b border-slate-100">
+                                        <td class="py-4 font-semibold">Discovery</td>
+                                        <td class="py-4 text-slate-500">Luck/Hope</td>
+                                        <td class="py-4 font-bold text-navy-600">Intent-based</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-100">
+                                        <td class="py-4 font-semibold">Reach</td>
+                                        <td class="py-4 text-slate-500">Limited</td>
+                                        <td class="py-4 font-bold text-navy-600">Unlimited Scale</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-100">
+                                        <td class="py-4 font-semibold">Data</td>
+                                        <td class="py-4 text-slate-500">Guessed</td>
+                                        <td class="py-4 font-bold text-navy-600">Precise ROI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 font-semibold">Outcome</td>
+                                        <td class="py-4 text-slate-500">Card</td>
+                                        <td class="py-4 font-bold text-navy-600">Revenue Generator</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section id="case-study" class="py-32 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-5 case-text">
+                        <span class="px-4 py-1 bg-navy-600 text-xs font-bold tracking-widest uppercase rounded-full inline-block mb-6">Case Study</span>
+                        <h2 class="text-4xl font-bold mb-6">The Iron Forge Transformation</h2>
+                        <p class="text-slate-400 mb-8 leading-relaxed">
+                            Iron Forge Gym possessed world-class trainers, yet their growth had plateaued. They were a victim of the <span class="text-white font-medium">"Visibility Gap"</span>—excellent service, zero reach.
+                        </p>
+                        <blockquote class="border-l-4 border-navy-500 pl-6 py-2 mb-10 italic text-xl text-slate-200">
+                            "Neev Logic didn't just build us a website; they built a pipeline. We went from wondering if the phone would ring to hiring new trainers to handle the intake."
+                            <footer class="mt-4 text-sm font-bold text-navy-500 not-italic uppercase tracking-wider">— Vikram S., Founder, Iron Forge Gym</footer>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="lg:col-span-7 case-stats">
+                        <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl">
+                            <h4 class="text-xl font-bold mb-8 flex items-center space-x-2">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-green-400"></i>
+                                <span>90-Day Performance Metrics</span>
+                            </h4>
+                            <div class="space-y-6">
+                                <div class="grid grid-cols-3 text-xs font-bold uppercase tracking-widest text-slate-500 border-b border-white/10 pb-2">
+                                    <div>Metric</div>
+                                    <div class="text-center">Before</div>
+                                    <div class="text-right text-navy-400">After Neev</div>
+                                </div>
+                                <div class="grid grid-cols-3 items-center py-2">
+                                    <div class="text-sm font-medium">Weekly Inquiries</div>
+                                    <div class="text-center text-slate-400">8 - 10</div>
+                                    <div class="text-right font-bold text-green-400 text-lg">+160%</div>
+                                </div>
+                                <div class="grid grid-cols-3 items-center py-2">
+                                    <div class="text-sm font-medium">Load Speed</div>
+                                    <div class="text-center text-slate-400">4.2s</div>
+                                    <div class="text-right font-bold text-green-400 text-lg">0.9s</div>
+                                </div>
+                                <div class="grid grid-cols-3 items-center py-2">
+                                    <div class="text-sm font-medium">New Signups</div>
+                                    <div class="text-center text-slate-400">12</div>
+                                    <div class="text-right font-bold text-green-400 text-lg">2.5x</div>
+                                </div>
+                                <div class="grid grid-cols-3 items-center py-2">
+                                    <div class="text-sm font-medium">Search Rank</div>
+                                    <div class="text-center text-slate-400">Page 3-4</div>
+                                    <div class="text-right font-bold text-green-400 text-lg">Top 3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Neev Solution -->
+    <section id="solution" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold tracking-widest text-navy-600 uppercase mb-4">Our Framework</h2>
+                    <h3 class="text-5xl font-bold text-slate-900 leading-tight">Engineering your digital architecture.</h3>
+                </div>
+                <div class="text-slate-500 max-w-md italic quote-reveal">
+                    "A business is only as resilient as the logic of its foundation."
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-0 border border-slate-100 rounded-3xl overflow-hidden divide-x divide-slate-100">
+                <div class="solution-panel p-12 bg-white group hover:bg-slate-50 transition-colors">
+                    <span class="text-6xl font-black text-slate-100 group-hover:text-navy-100 transition-colors mb-8 block">01</span>
+                    <h4 class="text-2xl font-bold mb-4">The Build</h4>
+                    <p class="text-slate-600 mb-8 leading-relaxed">Mobile-first, lightning-fast websites engineered for the Indian consumer. Clean code, technical integrity, and scalability.</p>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i><span>Responsive Design</span></li>
+                        <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i><span>Optimized Performance</span></li>
+                    </ul>
+                </div>
+                <div class="solution-panel p-12 bg-white group hover:bg-slate-50 transition-colors">
+                    <span class="text-6xl font-black text-slate-100 group-hover:text-navy-100 transition-colors mb-8 block">02</span>
+                    <h4 class="text-2xl font-bold mb-4">The Reach</h4>
+                    <p class="text-slate-600 mb-8 leading-relaxed">Targeted Google & Meta ad campaigns tailored for your local area to ensure your business stays at the top of the stack.</p>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i><span>Local SEO</span></li>
+                        <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i><span>Ad Management</span></li>
+                    </ul>
+                </div>
+                <div class="solution-panel p-12 bg-white group hover:bg-slate-50 transition-colors">
+                    <span class="text-6xl font-black text-slate-100 group-hover:text-navy-100 transition-colors mb-8 block">03</span>
+                    <h4 class="text-2xl font-bold mb-4">The Growth</h4>
+                    <p class="text-slate-600 mb-8 leading-relaxed">Continuous maintenance and data-driven scaling. We transform 'hits' into a loyal community of repeat customers.</p>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i><span>Retention Logic</span></li>
+                        <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i><span>Monthly Analytics</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="py-24 bg-navy-900 text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-light italic leading-snug max-w-4xl mx-auto quote-reveal">
+                "Strong foundations lead to limitless growth."
+            </h2>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6">Let’s discuss your digital architecture.</h2>
+                    <p class="text-xl text-slate-600 mb-10">Stop losing customers to inferior competitors. Secure your foundation today.</p>
+                    
+                    <div class="space-y-6">
+                        <a href="https://wa.me/8074150568" class="flex items-center p-6 border border-slate-100 rounded-2xl hover:border-navy-200 hover:bg-slate-50 transition-all group">
+                            <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform shadow-lg shadow-green-500/20">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">Chat with a Digital Architect</h5>
+                                <p class="text-slate-500 text-sm">Fastest response for project inquiries.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Business Name</label>
+                                <input type="text" placeholder="Your Business" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Phone Number</label>
+                                <input type="tel" placeholder="+91 00000 00000" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Primary Goal</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-navy-500/20 focus:border-navy-500 transition-all appearance-none bg-white">
+                                <option>Build a New Site & Run Ads</option>
+                                <option>Improve Local Visibility</option>
+                                <option>Scale Existing Traffic</option>
+                                <option>Just a Website Build</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-navy-900 text-white font-bold rounded-lg hover:bg-black transition-all">
+                            Secure My Foundation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-100 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center space-x-2">
+                    <div class="w-6 h-6 bg-navy-900 rounded-sm flex items-center justify-center">
+                        <span class="text-white font-bold text-[10px]">NL</span>
+                    </div>
+                    <span class="font-bold text-lg tracking-tight text-slate-900">NEEV LOGIC</span>
+                </div>
+                <div class="text-slate-500 text-sm">
+                    © 2026 Neev Logic Digital Architecture. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-navy-900 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-navy-900 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+:root {
+    --navy-900: #0f172a;
+    --navy-800: #1e293b;
+    --navy-600: #2563eb;
+    --navy-500: #3b82f6;
+    --navy-200: #bfdbfe;
+    --navy-100: #dbeafe;
+}
+
+.bg-navy-900 { background-color: var(--navy-900); }
+.bg-navy-800 { background-color: var(--navy-800); }
+.text-navy-600 { color: var(--navy-600); }
+.text-navy-500 { color: var(--navy-500); }
+.text-navy-100 { color: var(--navy-100); }
+.border-navy-200 { border-color: var(--navy-200); }
+.focus-ring-navy-500\/20:focus { --tw-ring-color: rgba(59, 130, 246, 0.2); }
+.focus-border-navy-500:focus { border-color: var(--navy-500); }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Smooth Transitions */
+.solution-panel {
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal-text, .reveal-subtext, .reveal-btns {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.problem-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1);
+}
+
+.solution-panel {
+    opacity: 0;
+}
+
+.engine-table table tr:last-child {
+    border-bottom: none;
+}
+
+/* Floating Action Button Shadow */
+.floating-cta {
+    filter: drop-shadow(0 20px 30px rgba(34, 197, 94, 0.3));
+}
+
+@media (max-width: 768px) {
+    .reveal-text {
+        font-size: 3.5rem;
+    }
+}
