@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    emailjs.init('YOUR_PUBLIC_KEY');
+    emailjs.init('VjpSEgA5SWDZSjO3k');
 
     lucide.createIcons();
     gsap.registerPlugin(ScrollTrigger);
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerText = "Securing Foundation...";
             messageDiv.classList.add('hidden');
 
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+            emailjs.sendForm('service_6jwhddj', 'template_cihq4wf', contactForm)
                 .then(() => {
                     btn.innerText = "Foundation Secured!";
                     btn.style.backgroundColor = "#22c55e";
