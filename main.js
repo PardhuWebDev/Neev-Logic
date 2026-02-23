@@ -137,6 +137,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const businessName = businessNameInput.value.trim();
             const phone = phoneInput.value.trim();
 
+            if (!businessName) {
+                messageDiv.textContent = "Business name is required.";
+                messageDiv.className = "p-4 rounded-lg text-sm font-medium bg-red-50 text-red-700 border border-red-200";
+                messageDiv.classList.remove('hidden');
+                businessNameInput.focus();
+                return;
+            }
+
+            if (!phone) {
+                messageDiv.textContent = "Phone number is required.";
+                messageDiv.className = "p-4 rounded-lg text-sm font-medium bg-red-50 text-red-700 border border-red-200";
+                messageDiv.classList.remove('hidden');
+                phoneInput.focus();
+                return;
+            }
+
             if (!validatePhoneNumber(phone)) {
                 messageDiv.textContent = "Invalid phone number. Please enter exactly 10 digits.";
                 messageDiv.className = "p-4 rounded-lg text-sm font-medium bg-red-50 text-red-700 border border-red-200";
