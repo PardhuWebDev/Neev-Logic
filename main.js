@@ -99,12 +99,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
+        const validatePhoneNumber = (phone) => {
+            const digits = phone.replace(/\D/g, '');
+            return digits.length === 10;
+        };
+
+        const validateBusinessName = (name) => {
+            if (name.length < 6) return false;
+            if (/^\d+$/.test(name)) return false;
+            return true;
+        };
+
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            const businessNameInput = contactForm.querySelector('input[name="business_name"]');
+            const phoneInput = contactForm.querySelector('input[name="phone_number"]');
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
             const messageDiv = document.getElementById('form-message');
+
+            const businessName = businessNameInput.value.trim();
+            const phone = phoneInput.value.trim();
+
+            if (!validatePhoneNumber(phone)) {
+                messageDiv.textContent = "Invalid phone number. Please enter exactly 10 digits.";
+                messageDiv.className = "p-4 rounded-lg text-sm font-medium bg-red-50 text-red-700 border border-red-200";
+                messageDiv.classList.remove('hidden');
+                phoneInput.focus();
+                return;
+            }
+
+            if (!validateBusinessName(businessName)) {
+                if (/^\d+$/.test(businessName)) {
+                    messageDiv.textContent = "Invalid name. Business name cannot contain only numbers.";
+                } else {
+                    messageDiv.textContent = "Invalid name. Business name must be at least 6 characters long.";
+                }
+                messageDiv.className = "p-4 rounded-lg text-sm font-medium bg-red-50 text-red-700 border border-red-200";
+                messageDiv.classList.remove('hidden');
+                businessNameInput.focus();
+                return;
+            }
 
             btn.disabled = true;
             btn.innerText = "Securing Foundation...";
